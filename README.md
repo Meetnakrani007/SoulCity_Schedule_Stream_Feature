@@ -2,6 +2,8 @@
 
 A sleek, real-time streaming directory for the **SoulCity by EchoRP** GTA V roleplay community. Automatically fetches and displays upcoming YouTube livestreams tagged with `#lifeinsoulcity`.
 
+**🌟 Live Demo:** [https://soulcity-schedule-stream-feature.onrender.com](https://soulcity-schedule-stream-feature.onrender.com)
+
 ![SoulCity](./public/assets/demo.jpg)
 
 ## ✨ Features
