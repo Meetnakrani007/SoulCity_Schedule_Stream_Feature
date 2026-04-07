@@ -462,6 +462,8 @@ a {
   border-radius: 12px;
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
   transform: translateY(20px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 10px rgba(93, 173, 226, 0.15);
@@ -481,7 +483,7 @@ a {
 .thumbnail-container {
   background: #2a3a45;
   width: 100%;
-  padding-top: 56.25%;
+  padding-top: 65%;
   position: relative;
   overflow: hidden;
 }
@@ -545,8 +547,12 @@ a {
 
 .card-content {
   z-index: 2;
-  padding: 1.25rem;
+  padding: 1.15rem;
   position: relative;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   transition: transform 0.3s;
 }
 
@@ -557,13 +563,15 @@ a {
 .stream-card-title {
   color: #fff;
   margin-bottom: 0.6rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.4;
+  height: 2.8rem; /* Exact height for 2 lines */
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-overflow: ellipsis;
   transition: color 0.3s;
 }
 
@@ -576,12 +584,13 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
+  padding-bottom: 0.8rem;
 }
 
 .stream-channel-name {
   color: #6bb6e8;
   opacity: 0.8;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -598,7 +607,7 @@ a {
 .stream-card-stats {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   gap: 1rem;
-  margin-top: 0.75rem;
+  margin-top: auto;
   padding-top: 0.75rem;
   display: flex;
 }
@@ -607,7 +616,7 @@ a {
   color: #8698a7;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 500;
   transition: color 0.3s;
   display: flex;
