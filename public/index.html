@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soulcity By EchoRP</title>
+    <meta name="description" content="Watch upcoming streams and never miss a session.">
+    <link rel="icon" href="./assets/yt.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Background Layers -->
+    <div class="bg-stars"></div>
+    <div class="bg-image"></div>
+    <div class="bg-gradient"></div>
+
+    <!-- Header Orchestrator -->
+    <header class="header-orchestrator" id="navbar">
+        <div class="header-content">
+            <div class="header-island logo-island">
+                <a href="https://soulcity.gg/" class="logo" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/logo.jpg" alt="SoulCity RP" class="logo-img">
+                </a>
+            </div>
+
+            <div class="header-island nav-island desktop-nav">
+                <nav class="nav-links">
+                    <a class="nav-link active" href="/">Upcoming</a>
+                </nav>
+            </div>
+
+            <div class="header-island actions-island">
+                <div class="live-pill desktop-flex">
+                    <span class="live-dot-pulse"></span>
+                    <span class="live-text">STREAMING</span>
+                </div>
+                <a href="https://discord.com/invite/yP9s7cRgNx" class="discord-action-btn desktop-flex"
+                    title="Join Discord" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-discord"></i>
+                    <span class="btn-text">Join</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="filters-container">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Search streams..." class="search-input">
+            </div>
+
+            <div class="sort-box">
+                <label>Sort By:</label>
+                <select id="sortSelect" class="sort-select">
+                    <option value="likes" selected>Highest Likes</option>
+                    <option value="date">Newest First</option>
+                    <option value="az">A-Z</option>
+                </select>
+            </div>
+
+            <div class="stats-box">
+                <span class="stat-item" id="showingBadge">
+                    <i class="fa-solid fa-circle-dot"></i> Showing: <span id="showingCount">0</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div id="loader" class="state-msg">
+            <div class="spinner"></div>
+            <p>Loading live streams...</p>
+        </div>
+
+        <!-- Error -->
+        <div id="errorState" class="state-msg hidden">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <p>Failed to connect. Check your server.</p>
+            <button id="retryBtn" class="btn-join" style="margin-top:12px;">Retry</button>
+        </div>
+
+        <!-- Empty -->
+        <div id="emptyState" class="state-msg hidden">
+            <i class="fa-solid fa-video-slash"></i>
+            <p>No upcoming streams found right now.</p>
+        </div>
+
+        <!-- Video Grid -->
+        <div id="videoGrid" class="stream-grid hidden"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <a href="https://soulcity.gg/" class="footer-logo" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/logo.jpg" alt="Soul City" class="logo-img">
+                </a>
+                <p class="footer-tagline">Join the most immersive GTA V roleplay experience. Dive into a world where
+                    your story matters.</p>
+                <div class="footer-socials">
+                    <a href="https://www.youtube.com/@SoulcityGG" class="social-link youtube" title="YouTube"
+                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/soulcitygg" class="social-link instagram" title="Instagram"
+                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://discord.com/invite/yP9s7cRgNx" class="social-link discord" title="Discord"
+                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p class="footer-copyright">© 2026 Soulcity All rights reserved.</p>
+                <p class="footer-love">Built with <span class="heart">❤️</span> by Soulcity Community</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
