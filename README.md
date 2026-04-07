@@ -2,7 +2,7 @@
 
 A sleek, real-time streaming directory for the **SoulCity by EchoRP** GTA V roleplay community. Automatically fetches and displays upcoming YouTube livestreams tagged with `#lifeinsoulcity`.
 
-![SoulCity](./public/assets/bg.jpg)
+![SoulCity](./public/assets/demo.jpg)
 
 ## ✨ Features
 
@@ -16,13 +16,13 @@ A sleek, real-time streaming directory for the **SoulCity by EchoRP** GTA V role
 
 ## 🛠 Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| **Backend** | Node.js + Express |
-| **API** | YouTube Data API v3 |
-| **Frontend** | Vanilla HTML/CSS/JS |
-| **Font** | [Outfit](https://fonts.google.com/specimen/Outfit) (Google Fonts) |
-| **Icons** | Font Awesome 6 |
+| Layer        | Technology                                                        |
+| ------------ | ----------------------------------------------------------------- |
+| **Backend**  | Node.js + Express                                                 |
+| **API**      | YouTube Data API v3                                               |
+| **Frontend** | Vanilla HTML/CSS/JS                                               |
+| **Font**     | [Outfit](https://fonts.google.com/specimen/Outfit) (Google Fonts) |
+| **Icons**    | Font Awesome 6                                                    |
 
 ## 🚀 Getting Started
 
@@ -53,8 +53,8 @@ Open [http://localhost:3232](http://localhost:3232) in your browser.
 
 ### Environment Variables
 
-| Variable | Description |
-|----------|-------------|
+| Variable          | Description                  |
+| ----------------- | ---------------------------- |
 | `YOUTUBE_API_KEY` | Your YouTube Data API v3 key |
 
 ## 📁 Project Structure
