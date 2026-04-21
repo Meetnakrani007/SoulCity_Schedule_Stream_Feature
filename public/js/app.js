@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       );
     }
 
-    // Sort
+    // Sort — only by raw YouTube API data (no derived metrics)
     const sort = sortSelect.value;
     if (sort === 'date') {
       filtered.sort((a, b) => {
@@ -76,8 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     } else if (sort === 'az') {
       filtered.sort((a, b) => a.title.localeCompare(b.title));
-    } else if (sort === 'likes') {
-      filtered.sort((a, b) => (b.likes || 0) - (a.likes || 0));
     }
 
     renderCards(filtered);
@@ -92,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
     streams.forEach((s, index) => {
       const card = document.createElement('a');
       card.className = 'stream-card';
-      // Added staggered animation via css custom props
       card.style.setProperty('--magnetic-y', '0px');
       card.style.setProperty('--magnetic-x', '0px');
       setTimeout(() => card.classList.add('visible'), index * 50);
@@ -129,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 class="stream-channel-name">${esc(s.channel)}</h3>
           </div>
           <div class="stream-card-stats">
-            <span class="stream-card-stat"><i class="fa-solid fa-heart"></i> ${s.likes || 0}</span>
+            <span class="stream-card-stat"><i class="fa-regular fa-calendar"></i> ${scheduleText}</span>
           </div>
         </div>
       `;

@@ -21,6 +21,15 @@ app.use((req, res, next) => {
   next();
 });
 
+// Routes for legal pages
+app.get("/privacy", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "privacy.html"));
+});
+
+app.get("/terms", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "terms.html"));
+});
+
 // Upcoming streams
 app.get("/api/upcoming", async (req, res) => {
   try {
@@ -42,7 +51,7 @@ app.get("/api/upcoming", async (req, res) => {
 
     const items = searchRes.data.items;
 
-    // Fetch video details: statistics + liveStreamingDetails
+    // Fetch video details: liveStreamingDetails only (no statistics — avoid derived data)
     const videoIds = items.map((i) => i.id.videoId).join(",");
     let detailsMap = {};
 
@@ -51,7 +60,7 @@ app.get("/api/upcoming", async (req, res) => {
         "https://www.googleapis.com/youtube/v3/videos",
         {
           params: {
-            part: "liveStreamingDetails,statistics,snippet",
+            part: "liveStreamingDetails,snippet",
             id: videoIds,
             key: process.env.YOUTUBE_API_KEY,
           },
@@ -60,7 +69,6 @@ app.get("/api/upcoming", async (req, res) => {
       detailsRes.data.items.forEach((v) => {
         detailsMap[v.id] = {
           liveDetails: v.liveStreamingDetails || {},
-          stats: v.statistics || {},
           snippet: v.snippet || {},
         };
       });
@@ -97,9 +105,9 @@ app.get("/api/upcoming", async (req, res) => {
       })
       .map((item) => {
         const details = detailsMap[item.id.videoId] || {};
-        const stats = details.stats || {};
         const liveDetails = details.liveDetails || {};
 
+        // Return only raw YouTube API data — no derived or calculated metrics
         return {
           title: item.snippet.title,
           videoId: item.id.videoId,
@@ -108,8 +116,6 @@ app.get("/api/upcoming", async (req, res) => {
           description: item.snippet.description,
           publishedAt: item.snippet.publishedAt,
           scheduledStart: liveDetails.scheduledStartTime || null,
-          viewers: parseInt(liveDetails.concurrentViewers || stats.viewCount || "0", 10),
-          likes: parseInt(stats.likeCount || "0", 10),
           status: "upcoming",
         };
       });
@@ -141,6 +147,7 @@ app.get("/api/live", async (req, res) => {
       }
     );
 
+    // Return only raw YouTube API data
     const videos = response.data.items.map((item) => ({
       title: item.snippet.title,
       videoId: item.id.videoId,
