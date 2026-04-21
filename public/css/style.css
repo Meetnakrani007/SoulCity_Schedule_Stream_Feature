@@ -761,6 +761,95 @@ a {
   }
 }
 
+/* ===== YOUTUBE ATTRIBUTION ===== */
+.yt-attribution {
+  margin: 0.75rem 0;
+}
+
+.yt-developed-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.25);
+  border-radius: 8px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.yt-developed-badge:hover {
+  background: rgba(255, 0, 0, 0.2);
+  border-color: rgba(255, 0, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+}
+
+.yt-logo-svg {
+  height: 20px;
+  width: auto;
+}
+
+/* ===== FOOTER EXTRAS ===== */
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-legal-links a {
+  color: #8698a7;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+.footer-legal-links a:hover {
+  color: #5dade2;
+}
+
+.footer-divider {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.8rem;
+}
+
+.footer-yt-notice {
+  color: #8698a7;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-yt-notice a {
+  color: #6bb6e8;
+  transition: color 0.3s;
+}
+
+.footer-yt-notice a:hover {
+  color: #5dade2;
+}
+
+.footer-contact {
+  margin: 0.5rem 0;
+}
+
+.footer-contact p {
+  color: #8698a7;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.footer-contact a {
+  color: #6bb6e8;
+  transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+  color: #5dade2;
+}
+
 /* ===== RESPONSIVE ===== */
 
 

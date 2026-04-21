@@ -116,7 +116,7 @@ app.get("/api/upcoming", async (req, res) => {
           description: item.snippet.description,
           publishedAt: item.snippet.publishedAt,
           scheduledStart: liveDetails.scheduledStartTime || null,
-          status: "upcoming",
+          liveBroadcastContent: details.snippet?.liveBroadcastContent || item.snippet.liveBroadcastContent || "upcoming",
         };
       });
 

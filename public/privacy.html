@@ -81,33 +81,55 @@
                 </section>
 
                 <section class="legal-section">
-                    <h2>3. Data Collection</h2>
-                    <p>We want to be completely transparent: <strong>we do not collect, store, or process any personal user data.</strong></p>
+                    <h2>3. Information We Access, Collect, Store, and Use</h2>
+                    <p>We want to be completely transparent about all information, including API Data relating to users, that this API Client accesses, collects, stores, and otherwise uses:</p>
+                    <h3>3.1 YouTube API Data (API Data Relating to Users)</h3>
+                    <p>Through the YouTube Data API v3, this API Client accesses the following <strong>publicly available</strong> API Data:</p>
                     <ul>
-                        <li>We do <strong>not</strong> require user accounts or login</li>
+                        <li><strong>Video Titles</strong> — The title text of upcoming livestream videos</li>
+                        <li><strong>Video Thumbnails</strong> — Thumbnail image URLs associated with videos</li>
+                        <li><strong>Scheduled Start Times</strong> — The date and time when a livestream is scheduled to begin</li>
+                        <li><strong>Channel Names</strong> — The name of the YouTube channel hosting each stream</li>
+                        <li><strong>Video IDs</strong> — Unique identifiers used to link directly to YouTube watch pages</li>
+                        <li><strong>Published Dates</strong> — The date when the video listing was originally created on YouTube</li>
+                        <li><strong>Live Broadcast Content Status</strong> — Whether a video is upcoming, live, or completed</li>
+                    </ul>
+                    <p>This API Data is fetched in <strong>real-time</strong> on each page load. We do <strong>not</strong> store, cache, or persist any YouTube API Data in our own databases or servers. The data is displayed to the user and then discarded when the user leaves the page.</p>
+                    <h3>3.2 Personal User Data</h3>
+                    <p>We do <strong>not</strong> collect, store, or process any personal user data whatsoever:</p>
+                    <ul>
+                        <li>We do <strong>not</strong> require user accounts, login, or authentication</li>
                         <li>We do <strong>not</strong> collect names, email addresses, or any personal identifiers from visitors</li>
-                        <li>We do <strong>not</strong> store any YouTube data in our own databases — all data is fetched in real-time and displayed directly</li>
+                        <li>We do <strong>not</strong> access any private, unlisted, or user-specific YouTube data</li>
                         <li>We do <strong>not</strong> track user behavior or browsing activity</li>
-                        <li>We do <strong>not</strong> share any data with third parties</li>
                     </ul>
                 </section>
 
                 <section class="legal-section">
-                    <h2>4. How Data is Used and Displayed</h2>
-                    <p>The publicly available YouTube data we fetch is used solely to:</p>
+                    <h2>4. How We Use, Process, and Share Information</h2>
+                    <h3>4.1 Use and Processing</h3>
+                    <p>The publicly available YouTube API Data we access is used and processed solely to:</p>
                     <ul>
-                        <li>Display a gallery of upcoming Soul City GTA RP livestreams</li>
-                        <li>Show stream titles, thumbnails, channel names, and scheduled times</li>
-                        <li>Provide direct links to watch streams on YouTube</li>
+                        <li>Display a gallery of upcoming Soul City GTA RP livestreams on this website</li>
+                        <li>Show stream titles, thumbnails, channel names, and scheduled times as provided by the YouTube API</li>
+                        <li>Provide direct links so users can watch streams on YouTube.com</li>
                     </ul>
-                    <p>All YouTube data is displayed as-is from the YouTube API without modification, derivation, or calculation. We do not create derived metrics or alter YouTube data in any way.</p>
+                    <p>All YouTube API Data is displayed as-is from the YouTube API without modification, derivation, or independent calculation. We do not create derived metrics, computed statistics, or alter YouTube data in any way.</p>
+                    <h3>4.2 Sharing</h3>
+                    <p>We do <strong>not</strong> share, sell, rent, trade, or transfer any user information or YouTube API Data to any third parties, whether internal departments or external parties. The YouTube API Data accessed by this application is used exclusively for the purposes described above (displaying publicly available livestream information on this website) and for no other purpose.</p>
                 </section>
 
                 <section class="legal-section">
-                    <h2>5. Cookies and Local Storage</h2>
-                    <p>This website does <strong>not</strong> use cookies for tracking, analytics, or advertising purposes.</p>
-                    <p>We do <strong>not</strong> use local storage or session storage to persist any user data.</p>
-                    <p>Third-party services loaded on this site (such as Google Fonts and Font Awesome CDN) may use their own cookies or tracking mechanisms as governed by their respective privacy policies:</p>
+                    <h2>5. Cookies, Local Storage, and Device Information</h2>
+                    <p>This application does <strong>not</strong> directly store, access, or collect (nor allow third parties to do so through us) any information directly or indirectly on or from users' devices using cookies, pixels, local storage, session storage, or any similar technology.</p>
+                    <p>Specifically:</p>
+                    <ul>
+                        <li>We do <strong>not</strong> use cookies for tracking, analytics, advertising, or any other purpose</li>
+                        <li>We do <strong>not</strong> use browser local storage or session storage to persist any data</li>
+                        <li>We do <strong>not</strong> use pixel tags, web beacons, or similar technologies</li>
+                        <li>We do <strong>not</strong> fingerprint devices or browsers</li>
+                    </ul>
+                    <p>However, third-party services loaded on this site (such as Google Fonts and Font Awesome via Cloudflare CDN) may independently use their own cookies or tracking mechanisms on users' devices as governed by their respective privacy policies. We do not control these third-party technologies:</p>
                     <ul>
                         <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> (for Google Fonts)</li>
                         <li><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a> (for cdnjs / Font Awesome CDN)</li>
@@ -115,8 +137,8 @@
                 </section>
 
                 <section class="legal-section">
-                    <h2>6. No Derived Data</h2>
-                    <p>We do <strong>not</strong> create, compute, or display any metrics derived from YouTube data. All information shown on this site comes directly from the YouTube Data API v3 and is presented without modification.</p>
+                    <h2>6. No Derived Data or Independent Metrics</h2>
+                    <p>We do <strong>not</strong> use YouTube's API to offer independently calculated or derived metrics or data that replace or provide new data that isn't available via YouTube's own services. All information shown on this site comes directly from the YouTube Data API v3 and is presented without modification, computation, or derivation.</p>
                 </section>
 
                 <section class="legal-section">
@@ -173,7 +195,19 @@
                     <span class="footer-divider">|</span>
                     <a href="/terms">Terms of Service</a>
                 </div>
+                <div class="yt-attribution">
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="yt-developed-badge" title="Developed with YouTube">
+                        <svg viewBox="0 0 90 20" class="yt-logo-svg" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.973 6.267c-.263-.982-.995-1.758-1.926-2.038C24.354 3.75 15 3.75 15 3.75s-9.354 0-11.047.479c-.931.28-1.663 1.056-1.926 2.038C1.5 8.038 1.5 11.75 1.5 11.75s0 3.712.527 5.483c.263.982.995 1.758 1.926 2.038C5.646 19.75 15 19.75 15 19.75s9.354 0 11.047-.479c.931-.28 1.663-1.056 1.926-2.038.527-1.771.527-5.483.527-5.483s0-3.712-.527-5.483z" fill="#FF0000"/>
+                            <path d="M12 15.75l7.5-4-7.5-4v8z" fill="#fff"/>
+                            <text x="34" y="15.5" fill="#fff" font-family="Outfit, sans-serif" font-size="9" font-weight="500">Developed with YouTube</text>
+                        </svg>
+                    </a>
+                </div>
                 <p class="footer-yt-notice">This application uses <a href="https://developers.google.com/youtube/terms/api-services-terms-of-service" target="_blank" rel="noopener noreferrer">YouTube API Services</a>. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+                <div class="footer-contact">
+                    <p><i class="fa-solid fa-envelope"></i> Contact: <a href="mailto:meetnakrani66@gmail.com">meetnakrani66@gmail.com</a></p>
+                </div>
                 <p class="footer-copyright">© 2026 Soulcity All rights reserved.</p>
                 <p class="footer-love">Built with <span class="heart">❤️</span> by Soulcity Community</p>
             </div>

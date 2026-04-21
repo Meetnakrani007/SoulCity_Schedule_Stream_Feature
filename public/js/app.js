@@ -110,11 +110,14 @@ document.addEventListener('DOMContentLoaded', () => {
         relativeText = 'TBD';
       }
 
+      // Use the raw liveBroadcastContent from YouTube API for the badge
+      const badgeText = (s.liveBroadcastContent || 'upcoming').toUpperCase();
+
       card.innerHTML = `
         <div class="thumbnail-container">
           <img src="https://i.ytimg.com/vi/${s.videoId}/maxresdefault.jpg" onerror="this.onerror=null; this.src='https://i.ytimg.com/vi/${s.videoId}/hqdefault.jpg';" alt="" class="thumbnail" loading="lazy">
           <div class="live-badge">
-            <span class="live-dot-small"></span> UPCOMING
+            <span class="live-dot-small"></span> ${badgeText}
           </div>
           <div class="duration-badge">
             <i class="fa-regular fa-clock"></i> ${relativeText}
