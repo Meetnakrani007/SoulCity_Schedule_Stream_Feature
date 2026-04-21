@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 3232;
+const PORT = process.env.PORT || 3232;
 
 // Serve frontend static files
 app.use(express.static(path.join(__dirname, "public")));
@@ -74,8 +74,8 @@ app.get("/api/upcoming", async (req, res) => {
         // Include videos with #lifeinsoulcity or #soulcity in the title or description
         const title = (item.snippet.title || "").toLowerCase();
         const desc = (item.snippet.description || "").toLowerCase();
-        if (!(title.includes("#lifeinsoulcity") || desc.includes("#lifeinsoulcity") || 
-              title.includes("#soulcity") || desc.includes("#soulcity"))) {
+        if (!(title.includes("#lifeinsoulcity") || desc.includes("#lifeinsoulcity") ||
+          title.includes("#soulcity") || desc.includes("#soulcity"))) {
           return false;
         }
 
