@@ -714,6 +714,12 @@ a {
   border-color: rgba(255, 0, 0, 0.5);
 }
 
+.youtube-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 .social-link.instagram:hover {
   background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
   border-color: rgba(225, 48, 108, 0.5);
@@ -769,6 +775,7 @@ a {
 .yt-developed-badge {
   display: inline-flex;
   align-items: center;
+  gap: 6px;
   padding: 6px 12px;
   background: rgba(255, 0, 0, 0.1);
   border: 1px solid rgba(255, 0, 0, 0.25);
@@ -784,9 +791,12 @@ a {
   box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
 }
 
-.yt-logo-svg {
-  height: 20px;
-  width: auto;
+.yt-developed-text {
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 /* ===== FOOTER EXTRAS ===== */
